@@ -49,8 +49,9 @@ public class Cookie extends JFrame{
         
         //below are the upgrade buttons, but could change them to a seperate file
         //
-        cbutton = new JButton("Pointer");
-        //add a pointer image
+        cbutton = new JButton("Pointer"); //again, might delete this alongside future "buttons", even the grid, due to potential additon of more files. 
+        //add a pointer image, named pointer.png, found in the GitHub issues
+        
             
     }
     
