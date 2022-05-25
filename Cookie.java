@@ -51,7 +51,7 @@ public class Cookie extends JFrame{
         //
         cbutton = new JButton("Pointer");
         //add a pointer image
-        
+            
     }
     
 }
