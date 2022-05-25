@@ -26,7 +26,7 @@ public class Cookie extends JFrame{
         JPanel cpanel = new JPanel();
         cpanel.setBounds(100,220,200,200);
         cpanel.setBackground(Color.WHITE);
-
+        
         window.add(cpanel);
         //icon for cookie, using eyeeye.png
         JButton cbutton = new JButton(new ImageIcon("eyeye.png"));
@@ -35,11 +35,23 @@ public class Cookie extends JFrame{
         //Clicker counter
         cbutton.addActionListener(ActionEvent ->{
             counter++;
-            label.setText("Cookies: " + counter);
+            label.setText(counter + " cookies");
             c=counter;
         });
         cpanel.add(cbutton);
         window.setVisible(true);
+        
+        //upgrading panel, for the upgrades, 5 upgrades.
+        JPanel upgradePanel = new JPanel();
+        upgradePanel.setBounds(600,200,250,250);
+        itemPanel.setColor(Color.BLUE);
+        upgradePanel.setLayout(new GridLayout(5,1));
+        
+        //below are the upgrade buttons, but could change them to a seperate file
+        //
+        cbutton = new JButton("Pointer");
+        //add a pointer image
+        
     }
     
 }
