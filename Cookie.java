@@ -1,8 +1,7 @@
 import java.awt.Color;
-
 import javax.swing.*;
 public class Cookie extends JFrame{
-    
+    //for the future cookie counter, keep on standby
     JLabel counter; 
 
     public static void main(String[] args) {
