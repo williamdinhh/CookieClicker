@@ -8,10 +8,10 @@ public class Cookie extends JFrame{
     private int counter; 
     public static void main(String[] args) {
 
-        //coordinate position of the panel/window
+        //find the coordiante position of the cursor, future use(?)
         double x = 0.0;
         double y = 0.0;
-        while(x != 0.0 && y != 0.0)
+        while((x != 0.0)&& (y != 0.0))
         {
             x = MouseInfo.getPointerInfo().getLocation().x;
             y = MouseInfo.getPointerInfo().getLocation().y;
@@ -51,8 +51,8 @@ public class Cookie extends JFrame{
         });
         cpanel.add(cbutton);
         window.setVisible(true);
-
     }
+    
         
     
 }
