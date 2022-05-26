@@ -1,21 +1,33 @@
 import java.awt.Color;
 import javax.swing.*;
-import javafx.event.ActionEvent;
+
+import java.awt.*;
 
 public class Cookie extends JFrame{
     //for the future cookie counter, keep on standby
     private int counter; 
-    private int c;
     public static void main(String[] args) {
+
+        //coordinate position of the panel/window
+        double x = 1.0;
+        double y = 1.0;
+        while(x != 0.0 && y != 0.0)
+        {
+            x = MouseInfo.getPointerInfo().getLocation().x;
+            y = MouseInfo.getPointerInfo().getLocation().y;
+        }
+        System.out.println(x + "," + y);
         new Cookie();
     }
+    
+
     public Cookie(){
         CookieCreation();
         
     }
+
     public void CookieCreation(){
 
-        //label for button counter
         JLabel label = new JLabel("Cookies: ");
         
         //make the window
@@ -36,23 +48,11 @@ public class Cookie extends JFrame{
         cbutton.addActionListener(ActionEvent ->{
             counter++;
             label.setText(counter + " cookies");
-            c=counter;
         });
         cpanel.add(cbutton);
         window.setVisible(true);
-        
-        //upgrading panel, for the upgrades, 5 upgrades.
-        JPanel upgradePanel = new JPanel();
-        upgradePanel.setBounds(600,200,250,250);
-        itemPanel.setColor(Color.BLUE);
-        upgradePanel.setLayout(new GridLayout(5,1));
-        
-        //below are the upgrade buttons, but could change them to a seperate file
-        //
-        cbutton = new JButton("Pointer"); //again, might delete this alongside future "buttons", even the grid, due to potential additon of more files. 
-        //add a pointer image, named pointer.png, found in the GitHub issues
-        
-            
+
     }
+        
     
 }
