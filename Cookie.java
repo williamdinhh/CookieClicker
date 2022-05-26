@@ -9,8 +9,8 @@ public class Cookie extends JFrame{
     public static void main(String[] args) {
 
         //coordinate position of the panel/window
-        double x = 1.0;
-        double y = 1.0;
+        double x = 0.0;
+        double y = 0.0;
         while(x != 0.0 && y != 0.0)
         {
             x = MouseInfo.getPointerInfo().getLocation().x;
