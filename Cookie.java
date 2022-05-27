@@ -3,6 +3,8 @@ import javax.swing.*;
 import java.awt.*;  
 import java.awt.event.*;  
 
+//create a timer using java threads
+
 public class Cookie extends JFrame{
     //for the future cookie counter, keep on standby
     private int counter; 
