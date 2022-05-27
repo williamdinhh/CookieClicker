@@ -82,8 +82,12 @@ public class Cookie extends JFrame{
     }
     
     //timer, running in the background using threads 
+    //idk how to use this lol 
+    //fix later, find out how to implement at timer later. 
     public class Timer extends Object(){
         public Timer(){
-            
+            public void run(){
+                
+            }
         }
     }
