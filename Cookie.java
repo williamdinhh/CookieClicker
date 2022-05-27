@@ -2,8 +2,7 @@ import java.awt.Color;
 import javax.swing.*;
 import java.awt.*;  
 import java.awt.event.*;  
-
-//create a timer using java threads
+import java.util.Timer;
 
 public class Cookie extends JFrame{
     //for the future cookie counter, keep on standby
@@ -24,10 +23,10 @@ public class Cookie extends JFrame{
     }
     
     public Cookie(){
-        CookieCreation();
+        CookieUI();
     }
 
-    public void CookieCreation(){        
+    public void CookieUI(){        
         //make the window
         JFrame window = new JFrame("the best form of cookie clicker");
         window.setSize(1024,768);
@@ -71,10 +70,7 @@ public class Cookie extends JFrame{
         window.setVisible(true);
         
     }
-    //use this method to calcualte CPS, for later.
-    public void cookieTimer(){
-
-    }
+    
     //way easier way of adding the cookie counter, using abstract classes
     public class CHandler implements ActionListener{
 
@@ -84,5 +80,10 @@ public class Cookie extends JFrame{
 
         }
     }
-
+    
+    //timer, running in the background using threads 
+    public class Timer extends Object(){
+        public Timer(){
+            
+        }
     }
