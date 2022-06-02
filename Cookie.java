@@ -14,6 +14,8 @@ public class Cookie extends JFrame{
 
     public static void main(String[] args) {
         new Cookie();
+        CookieCounter = new CookieCounter();
+        
         //coords for the pointer, use to find the spacing and size of panels
         while(true)
         {
@@ -70,24 +72,4 @@ public class Cookie extends JFrame{
         window.setVisible(true);
         
     }
-    
-    //way easier way of adding the cookie counter, using abstract classes
-    public class CHandler implements ActionListener{
-
-        public void actionPerformed(ActionEvent event){
-            counter++;
-            clabel.setText(counter + " cookies");
-
-        }
-    }
-    
-    //timer, running in the background using threads 
-    //idk how to use this lol 
-    //fix later, find out how to implement at timer later. 
-    public class Timer extends Object(){
-        public Timer(){
-            public void run(){
-                
-            }
-        }
     }
