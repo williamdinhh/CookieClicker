@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.event.*;  
 import java.util.Timer;
 
-public class Cookie extends JFrame{
+public class CookieMain extends JFrame{
     //for the future cookie counter, keep on standby
     private int counter; 
     private JLabel cps;
@@ -24,7 +24,7 @@ public class Cookie extends JFrame{
         
     }
     
-    public Cookie(){
+    public CookieMain(){
         CookieUI();
     }
 
