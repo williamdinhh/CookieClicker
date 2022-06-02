@@ -10,7 +10,7 @@ public class ActionListenerTest implements ActionListener {
     JButton button;
     JFrame frame;
     JTextArea textArea;
- 
+    int counter;
     public ActionListenerTest() {
         ImageIcon eye = new ImageIcon("eyeye.png");
         button = new JButton();
@@ -29,7 +29,7 @@ public class ActionListenerTest implements ActionListener {
  
     @Override
     public void actionPerformed(ActionEvent e) {
-        textArea.setText(textArea.getText().concat("You have clicked
-        the button\n"));
+        counter++;
+        textArea.setText(counter + "cookies");
     }
  
