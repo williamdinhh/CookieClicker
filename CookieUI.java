@@ -14,7 +14,7 @@ public class CookieUI {
     private JPanel cookiePanel, upgrade, counterCookiePanel;
     private JLabel counterCookie, CPS;
     private JButton cookie; 
-    private JButton upg1, upg2, upg3, upg4, upg5;
+    private JButton upg1, upg2, upg3, upg4;
     private int counter, timerSpeed;
     private Timer timer;
     private CookieCounter c = new CookieCounter();
@@ -39,7 +39,6 @@ public class CookieUI {
         upg2 = new JButton("Grandma");
         upg3 = new JButton("Farm");
         upg4 = new JButton("Mine");
-        upg5 = new JButton("Factory");
 
     }
 
