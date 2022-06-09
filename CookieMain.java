@@ -1,8 +1,10 @@
 public class CookieMain{
     
     public static void main(String[] args) {
-        CookieWindow yep = new CookieWindow();
-        yep.getWindow();
+
+        CookieWindow g = new CookieWindow();
+        g.getWindow();
+        
     }
 
 }
