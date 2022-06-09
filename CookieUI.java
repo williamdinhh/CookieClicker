@@ -14,7 +14,7 @@ public class CookieUI {
     private JPanel cookiePanel, upgrade, counterCookiePanel;
     private JLabel counterCookie, CPS;
     private JButton cookie; 
-    private JButton upg1, upg2, upg3, upg4, upg5;
+    private JButton upg1, upg2, upg3, upg4;
     private int counter, timerSpeed;
     private Timer timer;
     private CookieCounter c = new CookieCounter();
@@ -39,14 +39,13 @@ public class CookieUI {
         upg2 = new JButton("Grandma");
         upg3 = new JButton("Farm");
         upg4 = new JButton("Mine");
-        upg5 = new JButton("Factory");
 
     }
 
     public JPanel getCookiePanel(){
         
         cookiePanel.setBounds(100,220,320,300);
-
+        cookiePanel.setOpaque(true);
         return cookiePanel;
     }
 
@@ -58,18 +57,21 @@ public class CookieUI {
         cookie.setBorder(null);
         cookie.setFocusPainted(false);
         cookie.setActionCommand("Cookie");
+        cookie.setOpaque(true);
         return cookie;
     }
 
     public JPanel getCounterCookiePanel(){
         counterCookiePanel.setBounds(100,100,200,100);
         counterCookiePanel.setLayout(new GridLayout(2,1));
+        counterCookiePanel.setOpaque(true);
         return counterCookiePanel;
     }
 
     public JLabel getCounterCookie(){
         
         counterCookie.setText("0 cookies");
+        counterCookie.setOpaque(true);
         return counterCookie;
     }   
 
@@ -147,12 +149,12 @@ public class CookieUI {
                     break;
 
                 case ("Farm"):
-                    perSec = perSec + 10;
+                    perSec = perSec + 3;
                     cookieTimerUpdate();
                     break; 
                 
                 case("Mine"):
-                    perSec = perSec + 100;
+                    perSec = perSec + 5;
                     cookieTimerUpdate();
                     break;
                     

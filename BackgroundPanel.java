@@ -3,17 +3,16 @@ import java.awt.event.*;
 import javax.swing.*;
     /*
     This class is used to make the backpanel for the game, with cookie monster
-    circling around as you play.
-
-    
     */
+
 public class BackgroundPanel extends JPanel implements ActionListener{
     
     final int width = 1024;
     final int height = 768;
     Image backgroundImage;
     Image cookieMonster;
-    Timer timer2;
+    Image cookieMonster2;
+    Timer timer;
     int xVelocity = 2; 
     int yVelocity = 2;
     int x = 0;
@@ -23,8 +22,11 @@ public class BackgroundPanel extends JPanel implements ActionListener{
         this.setPreferredSize(new Dimension(width, height));
         backgroundImage = new ImageIcon("background.png").getImage();
         cookieMonster = new ImageIcon("cookiemonster.png").getImage();
-        timer2 = new Timer(10, this);
-        timer2.start();
+        
+        timer = new Timer(10, this);
+        timer.start();
+
+        
     }
 
     public void paint(Graphics g) {
@@ -37,6 +39,8 @@ public class BackgroundPanel extends JPanel implements ActionListener{
 
 
     }
+    //this makes it so that cookiemonster doesnt bounce off the sides when he is halfway into the box
+    //bounces on the edge of the image, rather than the center of the whole thing. 
 
     @Override
     public void actionPerformed(ActionEvent e) {
