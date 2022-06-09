@@ -1,3 +1,4 @@
+import java.awt.Dimension;
 import javax.swing.*;
 public class CookieWindow {
     /*
@@ -6,44 +7,47 @@ public class CookieWindow {
     private JFrame cFrame;
     private CookieUI g;
     private BackgroundPanel bp;
-
+    private JLayeredPane layers;
 
     public CookieWindow(){
         cFrame = new JFrame("cookie clicker clone lol");
         g = new CookieUI();
         bp = new BackgroundPanel();
+        layers = new JLayeredPane();
     }
 
     public JFrame getWindow(){
+        //adding bp to the layered panel doesnt work, but when adding to the frame, it works?
+        //the other JLayeredPanes work, with the upgrade panels, etc...
+        layers.setBounds(0,0,1024,768);  
+        layers.add(bp, JLayeredPane.DEFAULT_LAYER);
         cFrame.pack();
-        cFrame.setSize(1024,768);
-        cFrame.setResizable(false);
-        cFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        /*
-        note: how do I set the background panel as the background?
-        adding the backpanel makes the upgrades, cookies, and labels
-        to be overlapped by the panel itself. 
-         */
-        //cFrame.add(bp); // adds the background stuff in backPanel
-        cFrame.setLayout(null);
         
         //panel for the cookie
         g.getCookiePanel().add(g.getCookieButton());
-        cFrame.add(g.getCookiePanel());
+        //layers.add(g.getCookiePanel(), JLayeredPane.DRAG_LAYER);
 
         //cookie counter panel
         g.getCounterCookiePanel().add(g.getCounterCookie());
         g.getCounterCookiePanel().add(g.getCPS());
-        cFrame.add(g.getCounterCookiePanel());
+        //layers.add(g.getCounterCookiePanel(), JLayeredPane.DRAG_LAYER);
 
         //upgrades button addings
         g.upgrades().add(g.getClicker());
         g.upgrades().add(g.getGrandma());
         g.upgrades().add(g.getFarm());
         g.upgrades().add(g.getMine());
-        cFrame.add(g.upgrades());    
+        //layers.add(g.upgrades(), JLayeredPane.DRAG_LAYER);
         
+        //frame, adding the layeredpanes too 
+        cFrame.add(layers);
 
+        cFrame.setSize(new Dimension(1024,768));
+        cFrame.setResizable(false);
+        cFrame.setLocationRelativeTo(null);
+        cFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        cFrame.setLayout(null);
+        
         cFrame.setVisible(true);
 
         return cFrame;
