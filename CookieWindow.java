@@ -17,6 +17,8 @@ public class CookieWindow {
     }
 
     public JFrame getWindow(){
+
+        //this isj ust a test commenbt
         //adding bp to the layered panel doesnt work, but when adding to the frame, it works?
         //the other JLayeredPanes work, with the upgrade panels, etc...
         layers.setBounds(0,0,1024,768);  
@@ -31,7 +33,7 @@ public class CookieWindow {
         g.getCounterCookiePanel().add(g.getCounterCookie());
         g.getCounterCookiePanel().add(g.getCPS());
         //layers.add(g.getCounterCookiePanel(), JLayeredPane.DRAG_LAYER);
-
+        
         //upgrades button addings
         g.upgrades().add(g.getClicker());
         g.upgrades().add(g.getGrandma());
