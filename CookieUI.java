@@ -323,6 +323,7 @@ public class CookieUI {
 				}
 				
 			}
+            //two else if statements looks weird on github, but on my pc is fine. Probably since I copied and pasted the code above for convience
 			else if(button == upg3){
                 if(farmUnlocked == false){
 					popText.setText("You cannot purchase this yet");
