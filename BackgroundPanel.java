@@ -11,7 +11,6 @@ public class BackgroundPanel extends JPanel implements ActionListener{
     final int height = 768;
     Image backgroundImage;
     Image cookieMonster;
-    Image cookieMonster2;
     Timer timer;
     int xVelocity = 2; 
     int yVelocity = 2;
@@ -21,14 +20,15 @@ public class BackgroundPanel extends JPanel implements ActionListener{
     public BackgroundPanel(){
         this.setPreferredSize(new Dimension(width, height));
         backgroundImage = new ImageIcon("background.png").getImage();
-        cookieMonster = new ImageIcon("cookiemonster.png").getImage();
+        cookieMonster = new ImageIcon("cookiemonster.png").getImage().getScaledInstance(172, 121,Image.SCALE_DEFAULT); 
+        //.getScaledInstance shrinks it, the values are 5x smaller 
         
         timer = new Timer(10, this);
         timer.start();
 
         
     }
-
+    @Override
     public void paint(Graphics g) {
 
         super.paint(g); //paints background
