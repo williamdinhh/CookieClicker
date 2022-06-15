@@ -18,13 +18,13 @@ public class CookieWindow {
 
     public JFrame getWindow(){
         layers.setBounds(0,0,1024,768);  
-        //layers.add(new BackgroundPanel(), JLayeredPane.DEFAULT_LAYER); //this doesnt work?
+        layers.add(new BackgroundPanel(), JLayeredPane.DEFAULT_LAYER);
         cFrame.pack();
         
 
         //panel for the cookie
         g.getCookiePanel().add(g.getCookieButton());
-        layers.add(g.getCookiePanel(), JLayeredPane.DRAG_LAYER);
+        cFrame.add(g.getCookiePanel());
 
         //cookie counter panel
         g.getCounterCookiePanel().add(g.getCounterCookie());

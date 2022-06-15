@@ -76,6 +76,7 @@ public class CookieUI {
         
         cookiePanel.setBounds(100,220,320,300);
         cookiePanel.setBackground(null);
+        cookiePanel.setOpaque(true);
         return cookiePanel;
     }
 
