@@ -27,6 +27,7 @@ public class CookieUI {
     private boolean grandmaUnlocked, farmUnlocked, mineUnlocked;
 
     public CookieUI(){
+        
         //mouse stuff 
         t = new MouseHandler();
         c = new CookieCounter();
@@ -73,21 +74,21 @@ public class CookieUI {
     }
 
     public JPanel getCookiePanel(){
-        
+
         cookiePanel.setBounds(100,220,320,300);
         cookiePanel.setBackground(null);
-        cookiePanel.setOpaque(true);
+
         return cookiePanel;
     }
 
     public JButton getCookieButton(){
-
-        ImageIcon p = new ImageIcon("314x295.png");
+        ImageIcon p = new ImageIcon(this.getClass().getResource("/images/314x295.png"));
         cookie.setIcon(p);
         cookie.addActionListener(c);
         cookie.setBorder(null);
         cookie.setFocusPainted(false);
         cookie.setActionCommand("Cookie");
+        
         return cookie;
     }
 
@@ -191,7 +192,7 @@ public class CookieUI {
                         clickerNum++;
                         upg1.setText("Clicker" + "(" + clickerNum + ")");
                         perSec = perSec + 0.1;
-                        cookieTimer();
+                        cookieTimerUpdate();
                         
                     }
                     else{
@@ -207,7 +208,7 @@ public class CookieUI {
                         grandmaNum++;
                         upg2.setText("Grandma" + "(" + grandmaNum + ")");
                         perSec = perSec + 1;
-                        cookieTimer();
+                        cookieTimerUpdate();
                     }
                     else{
                         popText.setText("You can't afford this");
@@ -222,7 +223,7 @@ public class CookieUI {
                         farmNum++;
                         upg3.setText("Farm" + "(" + farmNum + ")");
                         perSec = perSec + 3;
-                        cookieTimer();
+                        cookieTimerUpdate();
                     }
                     else{
                         popText.setText("You can't afford this");
@@ -254,6 +255,7 @@ public class CookieUI {
                 public void actionPerformed(ActionEvent event){
                     counter++;
                     counterCookie.setText(counter + " cookies");
+                    
                     }
             });
             //this stuff  allows for the numbering of the upgrades
@@ -291,7 +293,7 @@ public class CookieUI {
         double speed = (1/perSec)*1000;
         timerSpeed = (int)Math.round(speed);
         //formats the CPS to 2 decimals because if left normally it makes a rlly long decimal
-        String format = String.format("%.1f",perSec);
+        String format = String.format("%.1f", perSec);
 
         CPS.setText(format + " CPS(without manual clicks)");
 

@@ -19,8 +19,8 @@ public class BackgroundPanel extends JPanel implements ActionListener{
 
     public BackgroundPanel(){
         this.setPreferredSize(new Dimension(width, height));
-        backgroundImage = new ImageIcon("background.png").getImage();
-        cookieMonster = new ImageIcon("cookiemonster.png").getImage().getScaledInstance(172, 121,Image.SCALE_DEFAULT); 
+        backgroundImage = new ImageIcon(this.getClass().getResource("/images/background.png")).getImage();
+        cookieMonster = new ImageIcon(this.getClass().getResource("/images/cookiemonster.png")).getImage().getScaledInstance(172, 121,Image.SCALE_DEFAULT); 
         //.getScaledInstance shrinks it, the values are 5x smaller 
         
         timer = new Timer(10, this);
